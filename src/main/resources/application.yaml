@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8080
 
 spring:
   application:
@@ -8,17 +8,17 @@ spring:
     gateway:
       routes:
         - id: account-service-route
-          uri: http://localhost:8282
+          uri: http://account-service:8080
           predicates:
             - Path=/api/v1/accounts/**
 
         - id: order-service-route
-          uri: http://localhost:8080
+          uri: http://order-service:8080
           predicates:
             - Path=/api/v1/orders/**
 
         - id: notification-service-route
-          uri: http://localhost:8080
+          uri: http://notification-service:8080
           predicates:
             - Path=/api/v1/notifications/**
 
