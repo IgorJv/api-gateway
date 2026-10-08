@@ -22,7 +22,6 @@
     </properties>
 
     <dependencies>
-        <!-- Стандартный реактивный стартер шлюза -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
