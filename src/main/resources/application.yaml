@@ -32,6 +32,9 @@ management:
       exposure:
         include: health, info, prometheus
   metrics:
-    export:
-      prometheus:
+    tags:
+      application: api-gateway
+  prometheus:
+    metrics:
+      export:
         enabled: true
