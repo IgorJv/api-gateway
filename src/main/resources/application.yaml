@@ -8,17 +8,17 @@ spring:
     gateway:
       routes:
         - id: account-service-route
-          uri: http://account-service
+          uri: lb://account-service
           predicates:
             - Path=/api/v1/accounts/**
 
         - id: order-service-route
-          uri: http://order-service
+          uri: lb://order-service
           predicates:
             - Path=/api/v1/orders/**
 
         - id: notification-service-route
-          uri: http://notification-service
+          uri: lb://notification-service
           predicates:
             - Path=/api/v1/notifications/**
 
